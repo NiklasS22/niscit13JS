@@ -62,6 +62,9 @@ legend {
     background-color: var(--chefchaouen-blue);
     border: 0.1rem solid black;
 }
+.hidden {
+    display: none !important;
+}
 
 /* Ueberschriften Attribute */
 header h1 {
@@ -92,10 +95,11 @@ header h2 {
     bottom: 0;
 }
 
-
-
-
-
+.controlsquareholder {  
+    position: relative;
+    width: 33%;
+    float: left;
+}
 
 /* Fieldset, Limiter und */
 fieldset {
@@ -119,10 +123,6 @@ fieldset {
 
 
 
-
-
-
-
 .cell {
     background-color: var(--zaffre);
 }
@@ -133,72 +133,25 @@ fieldset {
     background-color: var(--fandango);
 }
 
-
-
 .controlfield {
     display: flex;
 }
 .controlrow {
     float: left;
     width: 100%;
-    padding: 1vh;
 }
 
-
-
-/* Control Buttons Rand*/
-.upButton {
+/* Control Buttons */
+.controlbuttons {
     border: 1vh solid black;
-    background-color: #9955ff;  
-}
-.downButton {
+    border-radius: 10px;
     background-color: #9955ff;
-    border: 1vh solid black;
+    padding: auto;
 }
-.rightButton {
-    background-color: #9955ff;
-    border: 1vh solid black;
-}
-.leftButton {
-    background-color: #9955ff;
-    border: 1vh solid black;
-}
-
-.upButton:hover {
-    top:0;
-    background-color: #c8a4ff;
-    border: 1vh solid black;
+.controlbuttons:hover {
+    background-color: #dd75ff;
     cursor: pointer;
 }
-.downButton:hover {
-    bottom:0;
-    background-color: #c8a4ff;
-    border: 1vh solid black;
-    cursor: pointer;
-}
-.rightButton:hover {
-    right:0;
-    background-color: #c8a4ff;
-    border: 1vh solid black;
-    cursor: pointer;
-}
-.leftButton:hover {
-    left:0;
-    background-color: #c8a4ff;
-    border: 1vh solid black;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Sizebar (DONE) */
@@ -224,30 +177,13 @@ fieldset {
     justify-content: space-between;
 }
 
-
 /* Icons */
 .icon {
-    background-image: url('images/sprite.png');
+    transform: scale(0.8); /* Scale the element by 1.5x */
+    transform-origin: center;
+    width: 100%;
+    height: auto;
 }
-.icon-up-arrow {
-    background-position: -128px -64px;
-}
-.icon-down-arrow {
-    background-position: 0px 0px;
-}
-.icon-left-arrow{
-    background-position: 0px -64px;
-}
-.icon-right-arrow {
-    background-position: -128px 0px;
-}
-.icon-goal {
-    background-position: -64px 0px;
-}
-.icon-person {
-    background-position: -64px -64px;
-}
-
 
 /* End of Game Popup + Replay Button */
 .popup {
@@ -265,20 +201,22 @@ fieldset {
     border: none;
     padding: 0;
 }
-.popup-content {
+.popupmessage {
     background-color: var(--palatinate-blue);
     border: 0.5vh solid black;
     padding: 5%;
     font-size: xx-large;
 }
 .popup div div {
+    
     font-size: larger;
     font: bold;
     flex-direction: column;
     text-align: center;
     display: flex;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    
     
 }
 #replayButton {
@@ -297,8 +235,7 @@ border: 0.2vh solid black;
 @media (max-width: 480px) {
     .icon {
         display: inline-block; /* WICHTIG */
-        width: 64px;
-        height: 64px;
+   
         background-image: url('images/sprite.png');
         background-size: auto; /* Skalierung basierend auf Sprite-Größe */
         scale: 0.8;
@@ -341,11 +278,8 @@ border: 0.2vh solid black;
 @media (max-height: 500px) {
     .icon {
         display: inline-block; /* WICHTIG */
-        width: 64px;
-        height: 64px;
         background-image: url('images/sprite.png');
         background-size: auto; /* Skalierung basierend auf Sprite-Größe */
-        scale: 0.8;
     }
   
     header {

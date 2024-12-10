@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de"> 
-
 <head> 
     <meta charset="UTF-8">
     <title>Maze</title>
@@ -8,9 +7,42 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
-
 <body>
-    
+    <div id="icons" class="hidden">
+        <svg id="downButton" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M12 5l0 14"></path> 
+            <path d="M18 13l-6 6"></path> 
+            <path d="M6 13l6 6"></path> 
+        </svg>
+        <svg id="leftButton" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M5 12l14 0"></path> 
+            <path d="M5 12l6 6"></path> 
+            <path d="M5 12l6 -6"></path> 
+        </svg> 
+        <svg id="rightButton" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M5 12l14 0"></path> 
+            <path d="M13 18l6 -6"></path> 
+            <path d="M13 6l6 6"></path> 
+        </svg> 
+        <svg id="upButton" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M12 5l0 14"></path> 
+            <path d="M18 11l-6 -6"></path> 
+            <path d="M6 11l6 -6"></path> 
+        </svg> 
+        <svg id="player" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path> 
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path> 
+        </svg> 
+        <svg id="goal" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M8 21l4 0"></path> 
+            <path d="M10 21l0 -18"></path> 
+            <path d="M10 4l9 4l-9 4"></path> 
+        </svg> 
+        <svg id="replay" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> 
+            <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path> 
+            <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path> 
+            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path> 
+        </svg>
+    </div>
 </body>
-
 </html>
