@@ -1,0 +1,373 @@
+/* Stylesheet created by Niklas Scherz, colors by coolors.co */
+
+/*Hauptklassen*/
+:root {
+    --background-image: url(images/Background.webp);
+    --background-size: cover;
+    --background-position: center;
+    --background-repeat: no-repeat;
+    --rose: #f72585ff;
+    --fandango: #b5179eff;
+    --grape: #7209b7ff;
+    --chrysler-blue: #560badff;
+    --dark-blue: #480ca8ff;
+    --zaffre: #3a0ca3ff;
+    --palatinate-blue: #3f37c9ff;
+    --neon-blue: #4361eeff;
+    --chefchaouen-blue: #4895efff;
+    --vivid-sky-blue: #4cc9f0ff;
+    --light:  #eee;
+    --fieldwidth: 7;
+}
+header{
+    background: linear-gradient(to top, #cc33ff 40%, #6600ff 100%);
+    width: 30%;
+    height: 10vh;
+    margin: auto;
+    border: solid 0.4vh var(--grape);
+    text-align: center;
+    display: flex;
+}
+body {
+    background-image: var(--background-image);
+    background-size: var(--background-size);
+    background-position: var(--background-position);
+    background-repeat: var(--background-repeat);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main { 
+    padding-top: 0%;
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+   
+}
+footer{
+    background: linear-gradient(to bottom, #cc33ff 50%, #6600ff 100%);
+    padding: 0.5vh;
+    border: 0.2vh solid var(--grape);
+    font-weight: bold;
+    text-align: center;
+
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    height: 2vh;
+    width: fit-content;
+    position: fixed;
+    bottom: 0vh;
+    
+}
+legend {
+    background-color: var(--chefchaouen-blue);
+    border: 0.1rem solid black;
+}
+
+/* Ueberschriften Attribute */
+header h1 {
+    margin: auto;
+    font-size: 3vw;
+}
+header h2 {
+    margin: auto;
+    font-size: 1.5vw;
+}
+
+/* All Square Everythings */
+.squareholder {
+    position: relative;
+    width: calc(100% / var(--fieldwidth));
+    float: left;    
+}
+.squaresizer {
+    padding-top: 100%;
+    width: 100%;
+    position: relative;
+}
+.squarecontent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+/* Fieldset, Limiter und */
+fieldset {
+    border-radius: 5px;
+    border-color: var(--dark-blue);
+    margin: auto;
+    min-width: 70%;
+}
+
+.limiter {
+    width: 90vmin;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.row {
+    float: left;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.cell {
+    background-color: var(--zaffre);
+}
+.path {
+    background-color: var(--vivid-sky-blue);
+}
+.wall {
+    background-color: var(--fandango);
+}
+
+
+
+.controlfield {
+    display: flex;
+}
+.controlrow {
+    float: left;
+    width: 100%;
+    padding: 1vh;
+}
+
+
+
+/* Control Buttons Rand*/
+.upButton {
+    border: 1vh solid black;
+    background-color: #9955ff;  
+}
+.downButton {
+    background-color: #9955ff;
+    border: 1vh solid black;
+}
+.rightButton {
+    background-color: #9955ff;
+    border: 1vh solid black;
+}
+.leftButton {
+    background-color: #9955ff;
+    border: 1vh solid black;
+}
+
+.upButton:hover {
+    top:0;
+    background-color: #c8a4ff;
+    border: 1vh solid black;
+    cursor: pointer;
+}
+.downButton:hover {
+    bottom:0;
+    background-color: #c8a4ff;
+    border: 1vh solid black;
+    cursor: pointer;
+}
+.rightButton:hover {
+    right:0;
+    background-color: #c8a4ff;
+    border: 1vh solid black;
+    cursor: pointer;
+}
+.leftButton:hover {
+    left:0;
+    background-color: #c8a4ff;
+    border: 1vh solid black;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sizebar (DONE) */
+.sizebarButton {
+    width: 30%;
+    padding: 1em;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 0.3em;
+    border: 0.3vh solid var(--dark-blue);
+    background: radial-gradient(circle, #cc33ff 50%, #6600ff 100%);
+}
+.sizebarButton:hover {
+    background: linear-gradient(to top, #dd75ff 0%, #9955ff 100%);
+    cursor: pointer;
+}
+.sizebar {
+    display: flex;
+    padding: 1%;
+    text-align: center;
+    clear: both;
+    padding-bottom: 0;
+    justify-content: space-between;
+}
+
+
+/* Icons */
+.icon {
+    background-image: url('images/sprite.png');
+}
+.icon-up-arrow {
+    background-position: -128px -64px;
+}
+.icon-down-arrow {
+    background-position: 0px 0px;
+}
+.icon-left-arrow{
+    background-position: 0px -64px;
+}
+.icon-right-arrow {
+    background-position: -128px 0px;
+}
+.icon-goal {
+    background-position: -64px 0px;
+}
+.icon-person {
+    background-position: -64px -64px;
+}
+
+
+/* End of Game Popup + Replay Button */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 128, 128, 0.8); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+.popup-content {
+    background-color: var(--palatinate-blue);
+    border: 0.5vh solid black;
+    padding: 5%;
+    font-size: xx-large;
+}
+.popup div div {
+    font-size: larger;
+    font: bold;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+    
+}
+#replayButton {
+background-color: var(--grape);
+font-size: larger;
+padding: 1vh;
+border: 0.2vh solid black;
+}
+#replayButton:hover {
+    background-color: var(--fandango);
+    cursor: pointer;
+}
+
+
+/* Mobile-Vertikale-Ansicht */
+@media (max-width: 480px) {
+    .icon {
+        display: inline-block; /* WICHTIG */
+        width: 64px;
+        height: 64px;
+        background-image: url('images/sprite.png');
+        background-size: auto; /* Skalierung basierend auf Sprite-Größe */
+        scale: 0.8;
+    
+    }
+    body {
+        background-size: cover;
+        height: 100vh;
+    }
+    .main { 
+        padding-top: 0%;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    header {
+        width: 40%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        height: 10vh;
+        padding-top: 0;
+    }
+    header h1 {
+        margin: auto;
+        font-size: 8vw;
+    }
+    header h2 {
+        margin: auto;
+        font-size: 2.5vw;
+    }
+    #mediumButton, #smallButton, #largeButton {
+        width: 30%; 
+        font-size: smaller;
+        padding: 0.5rem;    
+    }
+
+}
+/* Mobil-Landscape-Ansicht */
+@media (max-height: 500px) {
+    .icon {
+        display: inline-block; /* WICHTIG */
+        width: 64px;
+        height: 64px;
+        background-image: url('images/sprite.png');
+        background-size: auto; /* Skalierung basierend auf Sprite-Größe */
+        scale: 0.8;
+    }
+  
+    header {
+        height: 12vh;
+    }
+    * {
+        font-size: 90%;
+    }
+    header h1 {
+    margin: auto;
+    font-size: 3vw;
+    }
+    header h2 {
+        margin: auto;
+        font-size: 1.5vw;
+    }
+    .main { 
+        padding-top: 0%;
+        display: flex;
+        flex-direction: row; 
+    }
+
+
+}
+
